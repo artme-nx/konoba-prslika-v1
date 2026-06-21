@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Konoba Prslika — Zlarin | Rafinirana dalmatinska kuhinja pod stoljetnom maslinom</title>
+<meta name="description" content="Konoba Prslika, obiteljska konoba na otoku Zlarinu kraj Šibenika. Rafinirana dalmatinska kuhinja s namirnicama iz vlastitog vrta, na terasi pod stoljetnom maslinom. TripAdvisor #1 na Zlarinu, Gault&Millau Hrvatska." />
+<link rel="canonical" href="https://artme-nx.github.io/konoba-prslika-v1/" />
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Konoba Prslika — Zlarin" />
+<meta property="og:description" content="Rafinirana dalmatinska kuhinja pod stoljetnom maslinom na otoku Zlarinu. Iz vlastitog vrta na vaš stol." />
+<meta property="og:url" content="https://artme-nx.github.io/konoba-prslika-v1/" />
+<meta property="og:locale" content="hr_HR" />
+<meta name="theme-color" content="#1A1A1A" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Konoba Prslika",
+  "servesCuisine": ["Dalmatian", "Mediterranean", "Croatian"],
+  "priceRange": "$$$",
+  "image": "https://artme-nx.github.io/konoba-prslika-v1/",
+  "url": "https://artme-nx.github.io/konoba-prslika-v1/",
+  "telephone": "+385996917026",
+  "email": "antonio.makale@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Zlarin",
+    "addressRegion": "Šibensko-kninska županija",
+    "addressCountry": "HR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.6976, "longitude": 15.8497 },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "220"
+  },
+  "founder": { "@type": "Person", "name": "Antonio Makale" }
+}
+</script>
+
+<style>
+:root{
+  --bg-base:#F5F1E8;
+  --bg-dark:#1A1A1A;
+  --text:#2C2C2C;
+  --accent:#B5784A;
+  --sage:#6B7B5E;
+  --mid:#9C8C7C;
+  --line:rgba(44,44,44,.14);
+  --line-d:rgba(245,241,232,.16);
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  background:var(--bg-base);
+  color:var(--text);
+  font-size:17px;
+  line-height:1.7;
+  font-weight:300;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.05;letter-spacing:.01em}
+.serif-i{font-family:var(--font-display);font-style:italic;font-weight:500}
+.eyebrow{
+  font-family:var(--font-body);
+  text-transform:uppercase;
+  font-size:11px;
+  letter-spacing:.22em;
+  color:var(--accent);
+  font-weight:500;
+  display:block;
+}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+section{position:relative}
+
+/* fallback image-bg containers */
+.imgbox{position:relative;overflow:hidden;background:#23211d}
+.imgbox::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,#2d2a24 0%,#403a30 45%,#5a4e3e 100%);
+  z-index:0;
+}
+.imgbox img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+
+/* ---------- HEADER ---------- */
+.hdr{
+  position:fixed;top:0;left:0;width:100%;z-index:90;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px clamp(20px,5vw,64px);
+  transition:background .4s ease,padding .4s ease,box-shadow .4s ease;
+}
+.hdr.scrolled{background:rgba(26,26,26,.92);backdrop-filter:blur(10px);padding:12px clamp(20px,5vw,64px);box-shadow:0 1px 0 var(--line-d)}
+.hdr .logo{font-family:var(--font-display);font-size:24px;font-weight:600;color:#fff;letter-spacing:.02em;line-height:1}
+.hdr .logo small{display:block;font-family:var(--font-body);font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-top:3px}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a.navlink{
+  color:rgba(245,241,232,.82);text-transform:uppercase;font-size:11px;letter-spacing:.15em;font-weight:400;
+  position:relative;padding:4px 0;transition:color .3s;
+}
+.nav a.navlink::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:width .35s ease}
+.nav a.navlink:hover{color:#fff}
+.nav a.navlink:hover::after{width:100%}
+.right{display:flex;align-items:center;gap:18px}
+.lang{display:flex;gap:2px;align-items:center;font-size:11px;letter-spacing:.1em;color:rgba(245,241,232,.6)}
+.lang button{background:none;border:none;color:rgba(245,241,232,.55);font-family:var(--font-body);font-size:11px;letter-spacing:.1em;cursor:pointer;padding:3px 5px;transition:color .25s;text-transform:uppercase}
+.lang button.active{color:var(--accent)}
+.lang button:hover{color:#fff}
+.lang span{opacity:.3}
+.btn-res{
+  background:var(--accent);color:#fff;border:none;cursor:pointer;
+  text-transform:uppercase;font-size:11px;letter-spacing:.16em;font-weight:500;
+  padding:13px 22px;font-family:var(--font-body);transition:background .3s,transform .3s;
+}
+.btn-res:hover{background:#9c6238;transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:95}
+.burger span{width:26px;height:2px;background:#fff;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* mobile menu */
+.mmenu{position:fixed;inset:0;background:var(--bg-dark);z-index:88;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mmenu.open{opacity:1;pointer-events:all}
+.mmenu a{font-family:var(--font-display);font-size:32px;color:#f5f1e8;font-style:italic;padding:10px}
+.mmenu .lang{margin-top:26px}
+
+/* ---------- HERO ---------- */
+.hero{height:100svh;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;will-change:transform}
+.hero-bg::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,#1c1a16,#312b22 50%,#4a3f30);z-index:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.hero-ov{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(15,14,12,.55) 0%,rgba(15,14,12,.35) 40%,rgba(15,14,12,.72) 100%)}
+.hero-c{position:relative;z-index:3;color:#fff;padding:0 24px;max-width:1000px}
+.hero-c .eyebrow{color:#e9d9c4;margin-bottom:26px}
+.hero-c h1{font-size:clamp(56px,8vw,96px);font-style:italic;font-weight:500;letter-spacing:.005em;text-shadow:0 2px 40px rgba(0,0,0,.4)}
+.hero-c h1 .ln{display:block;overflow:hidden}
+.hero-c h1 .ln span{display:inline-block}
+.hero-sub{margin-top:30px;font-size:16px;letter-spacing:.04em;color:rgba(255,255,255,.86);max-width:560px;margin-left:auto;margin-right:auto;font-weight:300}
+.scrollind{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-size:10px;letter-spacing:.25em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scrollind .bar{width:1px;height:46px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ---------- PHILOSOPHY ---------- */
+.philo{background:var(--bg-base);padding:clamp(90px,15vh,170px) 0;text-align:center}
+.philo .inner{max-width:680px;margin:0 auto}
+.philo .eyebrow{margin-bottom:34px}
+.philo p{font-family:var(--font-display);font-size:clamp(26px,3.6vw,40px);line-height:1.35;color:#34302a;font-weight:400}
+.philo .sig{margin-top:40px;font-family:var(--font-display);font-style:italic;font-size:22px;color:var(--accent)}
+
+/* ---------- MENU ---------- */
+.menu{background:var(--bg-dark);color:#f5f1e8;padding:clamp(80px,12vh,140px) 0}
+.menu .head{text-align:center;margin-bottom:70px}
+.menu .head .eyebrow{color:var(--accent)}
+.menu .head h2{font-size:clamp(38px,5.5vw,68px);color:#f5f1e8;margin-top:14px;font-style:italic}
+.menu .head p{color:rgba(245,241,232,.6);max-width:520px;margin:22px auto 0;font-size:15px}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(40px,7vw,100px)}
+.mitem{display:flex;align-items:baseline;gap:14px;padding:22px 0;border-bottom:1px solid var(--line-d)}
+.mitem .nm{font-family:var(--font-display);font-size:24px;color:#f5f1e8;white-space:nowrap;font-weight:500}
+.mitem .dot{flex:1;border-bottom:1px dotted rgba(245,241,232,.22);transform:translateY(-4px)}
+.mitem .ds{color:rgba(245,241,232,.58);font-size:13.5px;text-align:right;max-width:48%;line-height:1.5}
+.menu .foot{text-align:center;margin-top:54px;color:rgba(245,241,232,.5);font-style:italic;font-family:var(--font-display);font-size:19px}
+
+/* ---------- SPLIT (garden / olive) ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
+.split.rev .txt{order:2}
+.split .txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,120px)}
+.split .txt .eyebrow{margin-bottom:24px}
+.split .txt h2{font-size:clamp(34px,4.6vw,58px);margin-bottom:28px;color:#2c2c2c}
+.split .txt h2 em{font-style:italic;color:var(--accent)}
+.split .txt p{color:#56514a;font-size:16px;margin-bottom:18px;max-width:48ch}
+.split .media{position:relative;overflow:hidden;min-height:60vh}
+.split .media .imgbox{position:absolute;inset:-12% 0;height:124%}
+.split.garden{background:var(--bg-base)}
+.split.olive{background:#21201c;color:#f5f1e8}
+.split.olive .txt h2{color:#f5f1e8}
+.split.olive .txt p{color:rgba(245,241,232,.7)}
+.split.olive .txt h2 em{color:#cf9b6e}
+
+/* parallax img inside media */
+.parax{will-change:transform}
+
+/* ---------- GALLERY ---------- */
+.gal{background:var(--bg-base);padding:clamp(80px,12vh,140px) 0}
+.gal .head{text-align:center;margin-bottom:58px}
+.gal .head h2{font-size:clamp(34px,5vw,60px);font-style:italic;margin-top:12px}
+.masonry{columns:3;column-gap:16px}
+.masonry .cell{break-inside:avoid;margin-bottom:16px;border-radius:2px;overflow:hidden}
+.masonry .cell .imgbox{height:100%}
+.masonry .cell img{filter:sepia(.25) contrast(1.05) saturate(.9);transition:filter .6s,transform .8s;width:100%;display:block}
+.masonry .cell:hover img{filter:sepia(.05) contrast(1.04) saturate(1);transform:scale(1.04)}
+.masonry .h1{aspect-ratio:3/4}
+.masonry .h2{aspect-ratio:4/3}
+.masonry .h3{aspect-ratio:1/1}
+
+/* ---------- STORY (Antonio) ---------- */
+.story{background:#21201c;color:#f5f1e8;padding:clamp(90px,14vh,170px) 0;text-align:center}
+.story .inner{max-width:760px;margin:0 auto}
+.story .eyebrow{color:#cf9b6e}
+.story h2{font-size:clamp(36px,5vw,64px);font-style:italic;margin:16px 0 30px}
+.story p{color:rgba(245,241,232,.74);font-size:17px;margin-bottom:20px}
+.story .name{margin-top:34px;font-family:var(--font-display);font-size:24px;font-style:italic;color:#cf9b6e}
+.story .role{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,241,232,.5);margin-top:6px}
+.story .badges{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin-top:56px;padding-top:46px;border-top:1px solid var(--line-d)}
+.story .badge{text-align:center}
+.story .badge .b1{font-family:var(--font-display);font-size:34px;color:#f5f1e8;line-height:1}
+.story .badge .b2{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,241,232,.55);margin-top:10px}
+
+/* ---------- RESERVATION ---------- */
+.res{background:var(--bg-base);padding:clamp(80px,12vh,150px) 0}
+.res .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,6vw,90px);align-items:start}
+.res h2{font-size:clamp(34px,5vw,58px);font-style:italic;margin:14px 0 24px}
+.res .lead{color:#56514a;font-size:16px;margin-bottom:34px;max-width:42ch}
+.res .contact{display:flex;flex-direction:column;gap:18px}
+.res .crow{display:flex;flex-direction:column;border-top:1px solid var(--line);padding-top:16px}
+.res .crow .lab{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.res .crow a{font-family:var(--font-display);font-size:25px;color:#2c2c2c;transition:color .3s}
+.res .crow a:hover{color:var(--accent)}
+.res .crow .small{font-size:13.5px;color:var(--mid)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+form .full{grid-column:1/-1}
+form label{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
+form input,form textarea,form select{
+  width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);
+  padding:9px 0;font-family:var(--font-body);font-size:16px;color:#2c2c2c;transition:border-color .3s;
+}
+form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--accent)}
+form textarea{resize:vertical;min-height:64px}
+form .submit{grid-column:1/-1;justify-self:start;margin-top:6px}
+form button{background:var(--bg-dark);color:#f5f1e8;border:none;padding:15px 38px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:background .3s}
+form button:hover{background:var(--accent)}
+.formnote{grid-column:1/-1;font-size:12.5px;color:var(--mid);font-style:italic;font-family:var(--font-display)}
+
+/* ---------- LOCATION ---------- */
+.loc{background:var(--bg-dark);color:#f5f1e8;padding:clamp(80px,12vh,140px) 0}
+.loc .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:center}
+.loc h2{font-size:clamp(34px,5vw,58px);font-style:italic;color:#f5f1e8;margin:14px 0 26px}
+.loc p{color:rgba(245,241,232,.72);margin-bottom:18px;font-size:16px;max-width:46ch}
+.loc .ferry{border-left:2px solid var(--accent);padding:6px 0 6px 20px;margin:26px 0;font-size:15px;color:rgba(245,241,232,.82)}
+.loc .maplink{display:inline-flex;align-items:center;gap:10px;margin-top:10px;color:#cf9b6e;text-transform:uppercase;font-size:11px;letter-spacing:.16em;border-bottom:1px solid rgba(207,155,110,.4);padding-bottom:5px;transition:color .3s,border-color .3s}
+.loc .maplink:hover{color:#fff;border-color:#fff}
+.loc .mapbox{aspect-ratio:4/3;border-radius:2px;overflow:hidden;position:relative}
+.loc .mapbox .imgbox{position:absolute;inset:0}
+.loc .mapbox img{filter:sepia(.3) contrast(1.04) saturate(.85)}
+
+/* ---------- FOOTER ---------- */
+footer{background:#15140f;color:rgba(245,241,232,.6);padding:64px 0 40px}
+footer .grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:46px;border-bottom:1px solid var(--line-d)}
+footer .logo{font-family:var(--font-display);font-size:28px;color:#f5f1e8;font-weight:600}
+footer .logo small{display:block;font-family:var(--font-body);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-top:6px}
+footer .tag{margin-top:16px;font-family:var(--font-display);font-style:italic;font-size:18px;color:rgba(245,241,232,.7);max-width:34ch}
+footer h4{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-family:var(--font-body);font-weight:500}
+footer a{display:block;margin-bottom:9px;font-size:14px;transition:color .3s}
+footer a:hover{color:#f5f1e8}
+footer .badges{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:11.5px;letter-spacing:.06em;color:rgba(245,241,232,.5)}
+footer .badges b{color:#cf9b6e;font-weight:500}
+footer .bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:28px;font-size:12px;color:rgba(245,241,232,.4)}
+
+/* ---------- MOBILE RESERVE BAR ---------- */
+.mobar{position:fixed;bottom:0;left:0;width:100%;z-index:80;display:none;background:rgba(26,26,26,.96);backdrop-filter:blur(8px);padding:10px 14px;gap:10px;border-top:1px solid var(--line-d)}
+.mobar a{flex:1;text-align:center;padding:13px;text-transform:uppercase;font-size:11px;letter-spacing:.14em;font-weight:500;border-radius:2px}
+.mobar .call{background:var(--accent);color:#fff}
+.mobar .book{background:transparent;color:#f5f1e8;border:1px solid var(--line-d)}
+
+/* reveal base */
+.reveal{opacity:0;transform:translateY(26px)}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:980px){
+  .nav .navlink,.right .lang{display:none}
+  .burger{display:flex}
+  .right .btn-res{display:none}
+  .mgrid{grid-template-columns:1fr;gap:0}
+  .split,.split.rev{grid-template-columns:1fr}
+  .split.rev .txt{order:0}
+  .split .media{min-height:56vh;order:2}
+  .res .grid,.loc .grid{grid-template-columns:1fr;gap:48px}
+  .masonry{columns:2}
+  footer .grid{grid-template-columns:1fr 1fr}
+  .mobar{display:flex}
+  body{padding-bottom:64px}
+}
+@media(max-width:560px){
+  .masonry{columns:1}
+  footer .grid{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .mitem .ds{display:none}
+  .mitem .dot{display:none}
+  .story .badges{gap:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <a href="#top" class="logo">Prslika<small>Zlarin · Dalmacija</small></a>
+  <nav class="nav">
+    <a href="#filozofija" class="navlink">Filozofija</a>
+    <a href="#menu" class="navlink">Menu</a>
+    <a href="#vrt" class="navlink">Vrt</a>
+    <a href="#prica" class="navlink">Naša priča</a>
+    <a href="#lokacija" class="navlink">Lokacija</a>
+  </nav>
+  <div class="right">
+    <div class="lang">
+      <button class="active" data-l="HR">HR</button><span>/</span>
+      <button data-l="EN">EN</button><span>/</span>
+      <button data-l="DE">DE</button>
+    </div>
+    <button class="btn-res" data-res>Rezerviraj</button>
+    <button class="burger" id="burger" aria-label="Izbornik"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mmenu">
+  <a href="#filozofija" class="mlink">Filozofija</a>
+  <a href="#menu" class="mlink">Menu</a>
+  <a href="#vrt" class="mlink">Iz vlastitog vrta</a>
+  <a href="#prica" class="mlink">Naša priča</a>
+  <a href="#lokacija" class="mlink">Lokacija</a>
+  <a href="#rezervacije" class="mlink" style="color:#cf9b6e">Rezerviraj stol</a>
+  <div class="lang">
+    <button class="active">HR</button><span>/</span><button>EN</button><span>/</span><button>DE</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg" id="heroBg">
+    <img src="https://images.unsplash.com/photo-1445264718234-a623be589d37?auto=format&fit=crop&w=1600&q=80" alt="Stoljetna maslina i kamena terasa" onerror="this.style.display='none'" />
+  </div>
+  <div class="hero-ov"></div>
+  <div class="hero-c">
+    <span class="eyebrow">Otok Zlarin · Obiteljska konoba</span>
+    <h1 id="heroTitle">Pod stoljetnom maslinom, gdje more, kamen i vrt postaju jedan tanjur.</h1>
+    <p class="hero-sub">Rafinirana dalmatinska kuhinja na otoku bez automobila, na terasi obrasloj mediteranskim zelenilom i okruženoj starim kamenim zidovima.</p>
+  </div>
+  <div class="scrollind"><span>Otkrijte</span><span class="bar"></span></div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philo" id="filozofija">
+  <div class="wrap"><div class="inner reveal">
+    <span class="eyebrow">Filozofija</span>
+    <p>Vjerujemo da najljepša jela počinju nekoliko koraka od stola — u vlastitom vrtu, na lokalnoj ribarici i u maslinjaku. Dalmatinsku tradiciju njegujemo s pažnjom, oplemenjujemo je biljem i začinima te poslužujemo onako kako zaslužuje: jednostavno, iskreno i precizno.</p>
+    <div class="sig">Iz našeg vrta, na vaš stol.</div>
+  </div></div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Sezonski menu</span>
+      <h2>Ono što otok i more daju</h2>
+      <p>Jelovnik se mijenja s ulovom i berbom. Ovo su jela koja vam najčešće poslužujemo — pripremljena od vrhunskih lokalnih namirnica.</p>
+    </div>
+    <div class="mgrid">
+      <div class="mitem reveal"><span class="nm">Svježa riba i plodovi mora</span><span class="dot"></span><span class="ds">Iz mreža zlarinskih ribara, na maslinovom ulju</span></div>
+      <div class="mitem reveal"><span class="nm">Meso ispod peke</span><span class="dot"></span><span class="ds">Janjetina i teletina, pečene polako pod žeravom</span></div>
+      <div class="mitem reveal"><span class="nm">Janjetina s ražnja</span><span class="dot"></span><span class="ds">Dalmatinski klasik, mirisan na lovor i ružmarin</span></div>
+      <div class="mitem reveal"><span class="nm">Domaća tjestenina</span><span class="dot"></span><span class="ds">Ručno rađena, sa škampima ili u šugu</span></div>
+      <div class="mitem reveal"><span class="nm">Povrće iz vlastitog vrta</span><span class="dot"></span><span class="ds">Ubrano istoga jutra, na žaru ili u salati</span></div>
+      <div class="mitem reveal"><span class="nm">Maslinovo ulje &amp; domaći kruh</span><span class="dot"></span><span class="ds">Temelj svakog dalmatinskog stola</span></div>
+      <div class="mitem reveal"><span class="nm">Lokalno vino</span><span class="dot"></span><span class="ds">Pomno biranih dalmatinskih vinara</span></div>
+      <div class="mitem reveal"><span class="nm">Domaći deserti</span><span class="dot"></span><span class="ds">Po starim obiteljskim receptima</span></div>
+    </div>
+    <p class="foot reveal">Cijene i puni jelovnik rado dijelimo pri rezervaciji.</p>
+  </div>
+</section>
+
+<!-- SPLIT: GARDEN -->
+<section class="split garden rev" id="vrt">
+  <div class="txt reveal">
+    <span class="eyebrow">Iz vlastitog vrta</span>
+    <h2>Sve počinje <em>nekoliko koraka</em> od stola</h2>
+    <p>Iza kamenih zidova konobe krije se naš vrt — rajčice, tikvice, mirisno bilje i začini koje beremo istog dana kad ih poslužimo. To je razlika koju ne možete sakriti: okus povrća koje nije putovalo, nego je doraslo na zlarinskom suncu.</p>
+    <p>Ono što ne uzgojimo sami, nabavljamo od ljudi koje poznajemo — ribara, maslinara i lokalnih vinara. Garden-to-table ovdje nije trend, nego najprirodniji način da se kuha na otoku.</p>
+  </div>
+  <div class="media">
+    <div class="imgbox parax" data-speed="0.12">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80" alt="Povrće iz vlastitog vrta" onerror="this.style.display='none'" />
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT: OLIVE -->
+<section class="split olive">
+  <div class="txt reveal">
+    <span class="eyebrow">Stoljetna maslina</span>
+    <h2>Terasa pod <em>stoljetnom maslinom</em></h2>
+    <p>Srce Prslike je terasa pod golemom maslinom staroga stoljeća, okružena mediteranskim zelenilom i starim kamenim zidovima. Drveni stolovi, hlad krošnje i tišina otoka bez automobila.</p>
+    <p>Gosti nam često kažu da se osjećaju kao da večeraju u vlastitom vrtu. Upravo to i želimo — da budete dio obitelji, makar na jednu večer.</p>
+  </div>
+  <div class="media">
+    <div class="imgbox parax" data-speed="0.12">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1600&q=80" alt="Stoljetna maslina i kamena terasa" onerror="this.style.display='none'" />
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Ambijent</span>
+      <h2>Trenuci s naše terase</h2>
+    </div>
+    <div class="masonry">
+      <div class="cell h1 reveal"><div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Dalmatinski plodovi mora" onerror="this.style.display='none'" /></div></div>
+      <div class="cell h2 reveal"><div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" alt="Stol pod maslinom" onerror="this.style.display='none'" /></div></div>
+      <div class="cell h3 reveal"><div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1000&q=80" alt="Domaća tjestenina" onerror="this.style.display='none'" /></div></div>
+      <div class="cell h2 reveal"><div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80" alt="Rafinirano dalmatinsko jelo" onerror="this.style.display='none'" /></div></div>
+      <div class="cell h1 reveal"><div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=80" alt="Kamena terasa i zelenilo" onerror="this.style.display='none'" /></div></div>
+      <div class="cell h3 reveal"><div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=1000&q=80" alt="Čaša lokalnog vina" onerror="this.style.display='none'" /></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="prica">
+  <div class="wrap"><div class="inner reveal">
+    <span class="eyebrow">Naša priča</span>
+    <h2>Obitelj Makale</h2>
+    <p>Prije desetak godina Antonio Makale i njegova obitelj započeli su svoju gastronomsku priču na malom otoku Zlarinu. Iz ljubavi prema otoku, vrtu i dalmatinskom stolu, Prslika je s godinama izrasla u jednu od vodećih konoba šibenskog kraja.</p>
+    <p>Danas, s mjestom na listi Gault&amp;Millau Hrvatska i prvim mjestom na Zlarinu, ostajemo ono što smo oduvijek bili — obiteljska konoba u kojoj se gost dočekuje kao prijatelj.</p>
+    <div class="name">Antonio Makale</div>
+    <div class="role">Vlasnik &amp; domaćin</div>
+    <div class="badges">
+      <div class="badge"><div class="b1">#1</div><div class="b2">TripAdvisor · Zlarin</div></div>
+      <div class="badge"><div class="b1">220</div><div class="b2">Recenzija gostiju</div></div>
+      <div class="badge"><div class="b1">G&amp;M</div><div class="b2">Gault&amp;Millau Hrvatska</div></div>
+      <div class="badge"><div class="b1">~10</div><div class="b2">Godina obiteljske priče</div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- RESERVATION -->
+<section class="res" id="rezervacije">
+  <div class="wrap"><div class="grid">
+    <div class="reveal">
+      <span class="eyebrow">Rezervacije</span>
+      <h2>Rezervirajte stol</h2>
+      <p class="lead">Online rezervacija nije moguća — najradije vas dočekujemo osobno. Nazovite ili nam pišite, a mi ćemo se pobrinuti za ostalo. Govorimo hrvatski, engleski i njemački.</p>
+      <div class="contact">
+        <div class="crow">
+          <span class="lab">Telefon</span>
+          <a href="tel:+385996917026">+385 99 691 7026</a>
+        </div>
+        <div class="crow">
+          <span class="lab">Email</span>
+          <a href="mailto:antonio.makale@gmail.com">antonio.makale@gmail.com</a>
+        </div>
+        <div class="crow">
+          <span class="lab">Jezici</span>
+          <span class="small">Hrvatski · English · Deutsch</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form onsubmit="return false">
+        <div>
+          <label>Ime i prezime</label>
+          <input type="text" placeholder="Vaše ime" />
+        </div>
+        <div>
+          <label>Broj gostiju</label>
+          <select><option>1–2</option><option>3–4</option><option>5–6</option><option>7+</option></select>
+        </div>
+        <div>
+          <label>Datum</label>
+          <input type="date" />
+        </div>
+        <div>
+          <label>Vrijeme</label>
+          <input type="time" />
+        </div>
+        <div class="full">
+          <label>Telefon ili email</label>
+          <input type="text" placeholder="Kako da vam se javimo" />
+        </div>
+        <div class="full">
+          <label>Poruka</label>
+          <textarea placeholder="Posebne želje, alergije..."></textarea>
+        </div>
+        <p class="formnote">Ova forma služi kao upit — potvrdu rezervacije dobit ćete telefonom ili emailom.</p>
+        <div class="submit"><button type="submit">Pošalji upit</button></div>
+      </form>
+    </div>
+  </div></div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc" id="lokacija">
+  <div class="wrap"><div class="grid">
+    <div class="reveal">
+      <span class="eyebrow">Lokacija</span>
+      <h2>Otok Zlarin</h2>
+      <p>Nalazimo se na otoku Zlarinu, mirnom otoku bez automobila kraj Šibenika, u srcu Dalmacije. Od pristaništa do konobe dijeli vas svega oko 200 metara — slijedite znakove od crkve.</p>
+      <div class="ferry">Do Zlarina se stiže brodom ili trajektom iz Šibenika. Provjerite raspored polazaka i prepustite se ritmu otoka bez automobila.</div>
+      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Konoba+Prslika+Zlarin" target="_blank" rel="noopener">Otvori na Google kartama →</a>
+    </div>
+    <div class="mapbox reveal">
+      <div class="imgbox"><img loading="lazy" src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?auto=format&fit=crop&w=1200&q=80" alt="Otok Zlarin i Jadran" onerror="this.style.display='none'" /></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="logo">Konoba Prslika<small>Zlarin · Dalmacija</small></div>
+        <p class="tag">Riba iz mora. Povrće iz vrta. Sve ostalo — priča.</p>
+        <div class="badges">
+          <span><b>Gault&amp;Millau</b> Hrvatska</span>
+          <span><b>TripAdvisor #1</b> na Zlarinu</span>
+          <span>HR · EN · DE</span>
+        </div>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="tel:+385996917026">+385 99 691 7026</a>
+        <a href="mailto:antonio.makale@gmail.com">antonio.makale@gmail.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Konoba+Prslika+Zlarin" target="_blank" rel="noopener">Zlarin, ~200 m od pristaništa</a>
+      </div>
+      <div>
+        <h4>Navigacija</h4>
+        <a href="#filozofija">Filozofija</a>
+        <a href="#menu">Menu</a>
+        <a href="#vrt">Iz vlastitog vrta</a>
+        <a href="#prica">Naša priča</a>
+        <a href="#rezervacije">Rezervacije</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Konoba Prslika · Obiteljska konoba na Zlarinu</span>
+      <span>Vlasnik: Antonio Makale</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE RESERVE BAR -->
+<div class="mobar">
+  <a class="call" href="tel:+385996917026">Nazovi</a>
+  <a class="book" href="#rezervacije">Rezerviraj</a>
+</div>
+
+<!-- LIBS -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Header scroll state ---- */
+  var hdr = document.getElementById('hdr');
+  function onScrollHdr(){ hdr.classList.toggle('scrolled', window.scrollY > 60); }
+  onScrollHdr(); window.addEventListener('scroll', onScrollHdr, {passive:true});
+
+  /* ---- Mobile menu ---- */
+  var burger = document.getElementById('burger');
+  var mmenu = document.getElementById('mmenu');
+  function toggleMenu(){ var o = mmenu.classList.toggle('open'); burger.classList.toggle('open', o); document.body.style.overflow = o ? 'hidden' : ''; }
+  burger.addEventListener('click', toggleMenu);
+  document.querySelectorAll('.mlink').forEach(function(a){ a.addEventListener('click', function(){ if(mmenu.classList.contains('open')) toggleMenu(); }); });
+
+  /* ---- Lang switcher (visual) ---- */
+  document.querySelectorAll('.lang').forEach(function(grp){
+    grp.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        grp.querySelectorAll('button').forEach(function(x){x.classList.remove('active')});
+        b.classList.add('active');
+      });
+    });
+  });
+
+  /* ---- Reserve button -> scroll to form ---- */
+  document.querySelectorAll('[data-res]').forEach(function(b){
+    b.addEventListener('click', function(){ document.getElementById('rezervacije').scrollIntoView({behavior: reduce?'auto':'smooth'}); });
+  });
+
+  if (reduce) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+    return;
+  }
+
+  /* ---- Lenis smooth scroll ---- */
+  var lenis = new Lenis({ duration:1.2, easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));}, smoothWheel:true });
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.ticker.add(function(time){ lenis.raf(time*1000); });
+  gsap.ticker.lagSmoothing(0);
+  lenis.on('scroll', ScrollTrigger.update);
+
+  /* anchor links through lenis */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href'); if(id.length<2) return;
+      var t = document.querySelector(id); if(!t) return;
+      e.preventDefault(); lenis.scrollTo(t, {offset:-10});
+    });
+  });
+
+  /* ---- Hero: word-by-word reveal + breathing scale ---- */
+  var ht = document.getElementById('heroTitle');
+  var words = ht.textContent.trim().split(' ');
+  ht.innerHTML = words.map(function(w){ return '<span class="ln"><span>'+w+'</span></span>'; }).join(' ');
+  var tl = gsap.timeline({delay:.25});
+  tl.from('#heroTitle .ln span', { yPercent:115, opacity:0, duration:.9, stagger:.06, ease:'power3.out' })
+    .from('.hero-c .eyebrow', { opacity:0, y:14, duration:.7 }, .1)
+    .from('.hero-sub', { opacity:0, y:16, duration:.8 }, '-=.4')
+    .from('.scrollind', { opacity:0, duration:.8 }, '-=.3');
+  gsap.fromTo('#heroBg', { scale:1.04 }, { scale:1, duration:2.4, ease:'power2.out' });
+
+  /* hero parallax */
+  gsap.to('#heroBg', { yPercent:18, ease:'none', scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:1 } });
+
+  /* ---- Section reveals ---- */
+  gsap.utils.toArray('.reveal').forEach(function(el){
+    gsap.to(el, {
+      opacity:1, y:0, duration:.9, ease:'power3.out',
+      scrollTrigger:{ trigger:el, start:'top 86%' }
+    });
+    gsap.set(el, {y:26});
+  });
+
+  /* ---- Parallax atmosphere images ---- */
+  gsap.utils.toArray('.parax').forEach(function(el){
+    var sp = parseFloat(el.getAttribute('data-speed')) || .12;
+    gsap.fromTo(el, { yPercent:-sp*100 }, {
+      yPercent:sp*100, ease:'none',
+      scrollTrigger:{ trigger:el.closest('.media')||el, start:'top bottom', end:'bottom top', scrub:1 }
+    });
+  });
+
+  ScrollTrigger.refresh();
+})();
+</script>
+</body>
+</html>
